@@ -1,0 +1,38 @@
+vim.api.nvim_create_augroup("my-luasnip", {})
+
+-- vim.api.nvim_create_autocmd('CompleteDone', {
+-- 	group = "my-luasnip",
+-- 	desc = "Expand LSP snippet",
+-- 	pattern = "*",
+-- 	callback = function(opts)
+-- 		local comp = vim.v.completed_item
+--
+-- 		-- check that this is an lsp completion
+-- 		if not vim.tbl_get(comp, 'user_data', 'nvim', 'lsp') then return end
+--
+-- 		local complete_info = comp.user_data.nvim.lsp.completion_item
+--
+--         local file = io.open("snippetish.txt", "w")
+-- 		-- check that we were given a snippet
+-- 		if complete_info.kind ~= 15 then return end
+--
+-- 		-- remove the inserted text
+-- 		-- vim.fn.cursor(vim.fn.line('.'), start_col)
+-- 		vim.cmd.normal{args = {#comp.word .. "h"}}
+-- 		vim.cmd.normal{args = {"d" .. #comp.word .. "l"}}
+--
+-- 		-- if the inserted text was the last text on the line, the deletion command will leave the cursor 1 column left
+-- 		-- of where we need to insert the snippet (because insert mode can put the cursor 1 position ahead of the last column)
+-- 		-- TODO: move the cursor back over 1
+--         if (vim.fn.col('.') == vim.fn.col('$') - 1) then
+--             vim.fn.cursor(vim.fn.line('.'), vim.fn.col('$'))
+--         end
+--
+-- 		-- insert snippet
+-- 		local snip_text = vim.tbl_get(complete_info, 'textEdit', 'newText') or complete_info.insertText
+--
+-- 		assert(snip_text, "Language server indicated it had a snippet, but no snippet text could be found!")
+-- 		require('luasnip').lsp_expand(snip_text)
+-- 	end
+-- })
+--
