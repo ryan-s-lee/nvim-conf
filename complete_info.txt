@@ -1,8 +1,0 @@
-{ ["kind"] = 15,
-["label"] = for .. ipairs,
-["insertTextFormat"] = 2,
-["sortText"] = 0001,
-["insertText"] = for ${1:index}, ${2:value} in ipairs(${3:t}) do
-	$0
-end,
-} 
