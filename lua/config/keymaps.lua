@@ -41,3 +41,4 @@ keymap.set("c", "<cr>",
 -- Completion
 -- remap ctrl-space to omnifunc
 keymap.set("i", "<C-Space>", "<Nop>", {noremap = true})
+keymap.set("i", "C-s", "vim.lsp.buf.signature_help", silent_opts)

@@ -19,7 +19,7 @@ return {
             mapping = cmp.mapping.preset.insert({
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-u>'] = cmp.mapping.scroll_docs(4),
-                ['<C-Space'] = cmp.mapping.complete(),  -- show completion window
+                ['<C-Space>'] = cmp.mapping.complete(),  -- show completion window
                 ['<C-e>'] = cmp.mapping.abort(),         -- close completion window
 
                 -- Safe entry selection with <CR>. If nvim-cmp is not visible, add a newline like usual.
@@ -40,6 +40,7 @@ return {
                 { name = "luasnip" },   -- snippets
                 { name = "buffer" },    -- text within current buffer
                 { name = "path" },      -- file system paths
+                { name = "nvim_lsp_signature_help" },
             }),
             formatting = {
                 format = lspkind.cmp_format({

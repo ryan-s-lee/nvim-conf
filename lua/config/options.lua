@@ -22,7 +22,7 @@ opt.termguicolors = true
 opt.colorcolumn = '120'
 opt.signcolumn = "yes"
 opt.cmdheight = 1
-opt.scrolloff = 10
+opt.scrolloff = 5
 opt.completeopt = "menuone,noinsert,noselect"
 
 -- Behavior
@@ -41,3 +41,4 @@ opt.modifiable = true
 -- TODO: customize cursor
 -- opt.guicursor = ???
 opt.encoding = "UTF-8"
+opt.exrc = true
