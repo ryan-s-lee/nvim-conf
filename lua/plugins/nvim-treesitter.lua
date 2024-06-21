@@ -3,9 +3,9 @@ config = function()
         indent = {
             enable = true,
         },
-        autotag = {
-            enable = true,
-        },
+        -- autotag = {
+        --     enable = true,
+        -- },
         ensure_installed = {
             "markdown",
             "markdown_inline",

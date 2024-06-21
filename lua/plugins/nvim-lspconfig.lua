@@ -4,7 +4,6 @@ local config = function()
 	-- TODO: Figure out how neoconf works
 	require("neoconf").setup({})
 
-	require('java').setup()
 	local cmp_nvim_lsp = require("cmp_nvim_lsp")
 	local lspconfig = require("lspconfig")
 
@@ -197,6 +196,13 @@ local config = function()
 				root_dir = function()
 					return vim.loop.cwd()
 				end,
+            })
+        end,
+
+        ["jdtls"] = function()
+            lspconfig.jdtls.setup({
+				capabilities = capabilities,
+                on_attach = on_attach,
             })
         end,
 	}

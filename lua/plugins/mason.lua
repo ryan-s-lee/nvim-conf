@@ -1,17 +1,18 @@
-local config = function()
-    require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
-    }
-})
-end
+-- local config = function()
+--     require("mason").setup({
+-- })
+-- end
 return {
     "williamboman/mason.nvim",
     cmd = "Mason",
     event = "BufReadPre",
-    config = config,
+    opts = {
+        ui = {
+            icons = {
+                package_installed = "✓",
+                package_pending = "➜",
+                package_uninstalled = "✗"
+            }
+        }
+    }
 }
