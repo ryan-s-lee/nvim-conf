@@ -6,6 +6,7 @@ local config = function()
 
 	local cmp_nvim_lsp = require("cmp_nvim_lsp")
 	local lspconfig = require("lspconfig")
+    require("java").setup()
 
 	-- TODO: Learn what cmp_nvim completion source capabilities are
 	local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -203,6 +204,19 @@ local config = function()
             lspconfig.jdtls.setup({
 				capabilities = capabilities,
                 on_attach = on_attach,
+                settings = {
+                    java = {
+                        configuration = {
+                            runtimes = {
+                                {
+                                    name = "JavaSE-21",
+                                    path = "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.3.9-hotspot\\bin",
+                                    default = true,
+                                },
+                            },
+                        },
+                    },
+                },
             })
         end,
 	}
