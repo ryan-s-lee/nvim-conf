@@ -40,3 +40,7 @@ within the init.lua directory
 
 Neovim will go through each lua script in `plugin/` automatically and run
 each of them.
+
+## TODO
+- [ ] Set up [conform](https://github.com/stevearc/conform.nvim)
+- [ ] Set up [nvim-lint](https://github.com/mfussenegger/nvim-lint)
