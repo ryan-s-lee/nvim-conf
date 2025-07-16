@@ -45,3 +45,8 @@ opt.modifiable = true
 -- opt.guicursor = ???
 opt.encoding = "UTF-8"
 opt.exrc = true
+
+vim.diagnostic.config({
+    jump = { float = true },
+    virtual_text = true,
+})
