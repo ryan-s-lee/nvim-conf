@@ -1,5 +1,5 @@
 return {
     cmd = { 'veridian' },
     filetypes = { 'systemverilog', 'verilog' },
-    root_markers = { '.git', 'veridian.yml' },
+    root_markers = { 'veridian.yml', '.git' },
 }
