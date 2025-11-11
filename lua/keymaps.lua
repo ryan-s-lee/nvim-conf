@@ -1,7 +1,7 @@
 -- default key remaps that I prefer
 
 local keymap = vim.keymap
-local silent_opts = {noremap = true, silent = true}
+local silent_opts = { noremap = true, silent = true }
 
 -- in visual line block mode, when indenting lines, keep visual block mode on
 keymap.set("v", "<", "<gv")
@@ -49,5 +49,8 @@ keymap.set("n", "<C-w><C-]><C-v>", "<C-w><C-v><C-]>", { desc = 'vsplit and go to
 -- mini.files
 vim.keymap.set("n", "-", MiniFiles.open, { desc = "Open parent directory" })
 
---------------------------------------------------------------------------------
+-- outline-nvim
+-- vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>",
+--     { desc = "Toggle Outline" })
 
+--------------------------------------------------------------------------------
